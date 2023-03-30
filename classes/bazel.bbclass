@@ -45,10 +45,10 @@ do_configure[cleandirs] = "${BAZEL_OUTPUT_USER_ROOT} ${BAZEL_OUTPUT_BASE}"
 OEBAZEL_STARTUP_OPTIONS:append = " --bazelrc=${WORKDIR}/bazelrc"
 
 bazel_do_compile()  {
-	bazel ${OEBAZEL_STARTUP_OPTIONS} \
-      build \
-      ${OEBAZEL_FLAGS} \
-      ${OEBAZEL_TARGET}
+    bazel ${OEBAZEL_STARTUP_OPTIONS} \
+        build \
+        ${OEBAZEL_FLAGS} \
+        ${OEBAZEL_TARGET}
 }
 
 EXPORT_FUNCTIONS do_configure do_compile
